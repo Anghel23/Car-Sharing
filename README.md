@@ -1,6 +1,6 @@
 # CarSharing
 
-Acest proiect reprezintă o aplicație completă de car-sharing, dezvoltată ca parte a cursului **ISSA (Inginerie Software Specifică Automobilelor)**. Aplicația permite utilizatorilor să se înregistreze, să adauge metode de plată și documente, să închirieze mașini și să gestioneze procesul de închiriere.
+Acest proiect reprezintă o aplicație completă de car-sharing, dezvoltată ca parte a cursului **ISSA (Inginerie Software Specifică Automobilelor)** susţinut de echipa Continental la Facultatea de Informatică din Iaşi. Aplicația permite utilizatorilor să se înregistreze, să adauge metode de plată și documente, să închirieze mașini și să gestioneze procesul de închiriere.
 
 ## Tehnologii utilizate
 
@@ -44,6 +44,3 @@ Proiectul este construit folosind un stack modern de tehnologii, incluzând:
 
 6. **Scheduler pentru închirieri expirate**
    - Închirierile expirate sunt șterse automat, iar starea mașinilor este actualizată.
-
-## Contribuții
-Acest proiect a fost dezvoltat ca parte a cursului ISSA (Inginerie Software Specifică Automobilelor) susţinut de echipa Continental la Facultatea de Informatică din Iaşi.
