@@ -45,4 +45,5 @@ Proiectul este construit folosind un stack modern de tehnologii, incluzând:
 6. **Scheduler pentru închirieri expirate**
    - Închirierile expirate sunt șterse automat, iar starea mașinilor este actualizată.
 
-## Structura proiectului
+## Contribuții
+Acest proiect a fost dezvoltat ca parte a cursului ISSA (Inginerie Software Specifică Automobilelor) susţinut de echipa Continental la Facultatea de Informatică din Iaşi.
