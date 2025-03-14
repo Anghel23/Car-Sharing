@@ -44,3 +44,12 @@ Proiectul este construit folosind un stack modern de tehnologii, incluzând:
 
 6. **Scheduler pentru închirieri expirate**
    - Închirierile expirate sunt șterse automat, iar starea mașinilor este actualizată.
+
+## Structura proiectului
+
+Proiectul este organizat în următoarele module:
+
+- **`backend/`** – Conține implementarea API-ului folosind FastAPI, gestionarea autentificării, bazei de date și a logicii de afaceri.
+- **`frontend/`** – Aplicația web dezvoltată în Angular pentru interfața utilizatorului, incluzând afișarea hărții interactive și gestionarea închirierilor.
+- **`car-telematic/`** – Modul responsabil de simularea telematicii mașinilor, dezvoltat în Python folosind Flask pentru gestionarea datelor despre vehicule.
+- **`uml/`** – Diagrame UML și de flux care descriu arhitectura și funcționarea sistemului.
