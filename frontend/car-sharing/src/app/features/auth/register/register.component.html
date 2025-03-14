@@ -1,0 +1,16 @@
+<div class="register-container">
+  <div class="register-box">
+      <h1>Înregistrare</h1>
+      <p>Completează datele pentru a-ți crea un cont.</p>
+
+      <form (submit)="register(); $event.preventDefault()">
+        <input type="text" [(ngModel)]="full_name" name="full_name" placeholder="Nume complet" required>
+        <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required>
+        <input type="password" [(ngModel)]="password" name="password" placeholder="Parolă" required>
+      
+        <button type="submit" class="cta-button">Finalizează înregistrarea</button>
+      </form>
+
+      <p class="login-link">Ai deja un cont? <a routerLink="/login">Autentifică-te</a></p>
+  </div>
+</div>

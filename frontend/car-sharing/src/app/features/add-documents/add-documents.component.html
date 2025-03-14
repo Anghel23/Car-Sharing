@@ -1,0 +1,12 @@
+<div class="page">
+  <div class="document-container">
+    <label for="fileInput" class="upload-btn">Add</label>
+    <input type="file" id="fileInput" (change)="onFileSelected($event)" accept="image/*" hidden />
+    
+    <div class="preview" *ngIf="selectedImage">
+      <img [src]="selectedImage" alt="Preview Image" />
+    </div>
+
+    <button class="submit-btn" (click)="onSubmit()">Submit</button>
+  </div>
+</div>

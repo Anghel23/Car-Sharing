@@ -1,0 +1,13 @@
+<div class="login-container">
+  <div class="login-box">
+    <h1>Logare</h1>
+    
+    <form (submit)="login(); $event.preventDefault()">
+      <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required>
+      <input type="password" [(ngModel)]="password" name="password" placeholder="Parolă" required>
+      <button type="submit" class="cta-button">Login</button>
+    </form>       
+
+    <p class="register-link">Nu ai un cont? <a routerLink="/register">Înregistrare</a></p>
+  </div>
+</div>

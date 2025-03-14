@@ -1,0 +1,38 @@
+.navbar {
+    background: black;
+    padding: 15px 20px;
+    color: yellow;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-title {
+    font-size: 24px;
+    color: yellow;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-icon {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.login-icon {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.login-icon:hover {
+    opacity: 0.4;
+}

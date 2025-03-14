@@ -1,0 +1,37 @@
+<div class="page">
+    <div class="payment-container">
+      <h2>Adaugă o metodă de plată</h2>
+      <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <label>Nume Titular</label>
+          <input type="text" formControlName="cardHolder" placeholder="Numele de pe card" />
+          <div *ngIf="paymentForm.get('cardHolder')?.invalid && paymentForm.get('cardHolder')?.touched">
+            <small>Numele este obligatoriu</small>
+          </div>
+        </div>
+  
+        <div class="input-group">
+          <label>Număr Card</label>
+          <input type="text" formControlName="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" (input)="formatCardNumber($event)" />
+          <div *ngIf="paymentForm.get('cardNumber')?.invalid && paymentForm.get('cardNumber')?.touched">
+            <small>Numărul cardului este invalid</small>
+          </div>
+        </div>
+  
+        <div class="input-row">
+          <div class="input-group small">
+            <label>Data Expirării</label>
+            <input type="text" formControlName="expiryDate" placeholder="MM/YY" maxlength="5" (input)="formatExpiryDate($event)" />
+          </div>
+  
+          <div class="input-group small">
+            <label>CVV</label>
+            <input type="password" formControlName="cvv" placeholder="***" maxlength="3" />
+          </div>
+        </div>
+  
+        <button type="submit" [disabled]="paymentForm.invalid">Adaugă Card</button>
+      </form>
+    </div>
+  </div>
+  

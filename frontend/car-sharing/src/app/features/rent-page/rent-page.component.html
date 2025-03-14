@@ -1,0 +1,16 @@
+<div class="rent-page">
+  <div class="rent-info">
+    <img src="icons/car-renting-icon.png" alt="car icon" class="rent-image">
+    <p><strong>{{ model }}</strong></p>
+    <p>Număr: {{ plate }}</p>
+    <p>⏳ Timp rămas: {{ formatTime(remainingTime) }}</p>
+    <button class="stop-rent-button" (click)="checkCanStopRental()">Stop Rent</button>
+  </div>
+</div>
+
+<div class="dialog-overlay" *ngIf="showDialog">
+  <div class="dialog-box">
+    <p>{{ dialogMessage }}</p>
+    <button (click)="closeDialog()">OK</button>
+  </div>
+</div>

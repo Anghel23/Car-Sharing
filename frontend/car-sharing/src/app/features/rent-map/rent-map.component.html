@@ -1,0 +1,36 @@
+<div class="user-icon-container">
+  <img src="icons/user-icon.png" alt="User" class="user-icon">
+</div>
+
+<div class="map-container">
+  <div class="map-frame">
+    <div id="map"></div>
+  </div>
+</div>
+
+<div class="rent-container" *ngIf="selectedCar && !isRenting">
+  <p>Mașină selectată: <strong>{{ selectedCar.model }}</strong> - {{ selectedCar.license_plate }}</p>
+  <button (click)="rentCar()" class="rent-button">Închiriază</button>
+</div>
+
+<div class="rent-menu" [class.open]="isRenting">
+  <div class="rent-menu-content">
+    
+    <div class="close-icon" (click)="closeRentMenu()">&#10006;</div>
+
+    <h2>Detalii închiriere</h2>
+    <p>Mașină: <strong>{{ selectedCar?.model }}</strong></p>
+    <p>Număr: <strong>{{ selectedCar?.license_plate }}</strong></p>
+
+    <label for="rentalDuration">Durată închiriere:</label>
+    <select id="rentalDuration" [(ngModel)]="selectedDuration" (change)="updatePrice()">
+      <option *ngFor="let option of rentalOptions" [value]="option.time">
+        {{ option.time }}
+      </option>
+    </select>
+
+    <p>Preț total: <strong>{{ selectedPrice }} lei</strong></p>
+
+    <button class="confirm-button" (click)="confirmRental()">Confirmă</button>
+  </div>
+</div>
