@@ -1,55 +1,55 @@
 # CarSharing
 
-Acest proiect reprezintă o aplicație completă de car-sharing, dezvoltată ca parte a cursului **ISSA (Inginerie Software Specifică Automobilelor)** susţinut de echipa Continental la Facultatea de Informatică din Iaşi. Aplicația permite utilizatorilor să se înregistreze, să adauge metode de plată și documente, să închirieze mașini și să gestioneze procesul de închiriere.
+This project is a full car-sharing application, developed as part of the **ISSA (Automotive-Specific Software Engineering)** course offered by the Continental team at the Faculty of Computer Science in Iași. The application allows users to register, add payment methods and documents, rent cars, and manage the rental process.
 
-## Tehnologii utilizate
+## Technologies Used
 
-Proiectul este construit folosind un stack modern de tehnologii, incluzând:
+The project is built using a modern technology stack, including:
 
 ### Frontend
-- **Angular**: Framework pentru dezvoltarea aplicațiilor web.
-- **TypeScript**: Limbaj de programare tipizat pentru dezvoltarea aplicațiilor frontend.
-- **Leaflet**: Bibliotecă pentru afișarea hărților interactive.
-- **HTML5 & CSS3**: Structurarea și stilizarea interfeței utilizatorului.
+- **Angular**: A framework for building web applications.
+- **TypeScript**: A typed programming language for frontend development.
+- **Leaflet**: A library for displaying interactive maps.
+- **HTML5 & CSS3**: For structuring and styling the user interface.
 
 ### Backend
-- **FastAPI**: Framework rapid pentru dezvoltarea API-urilor RESTful.
-- **SQLAlchemy**: ORM pentru gestionarea bazei de date.
-- **SQLite**: Bază de date utilizată pentru stocarea datelor aplicației.
-- **APScheduler**: Scheduler pentru gestionarea sarcinilor recurente (ex. ștergerea închirierilor expirate).
+- **FastAPI**: A fast framework for developing RESTful APIs.
+- **SQLAlchemy**: An ORM for database management.
+- **SQLite**: The database used to store application data.
+- **APScheduler**: A scheduler for managing recurring tasks (e.g., removing expired rentals).
 
-### Altele
-- **JWT (JSON Web Tokens)**: Pentru autentificarea utilizatorilor.
-- **bcrypt**: Pentru securizarea parolelor utilizatorilor.
-- **Flask**: Utilizat pentru gestionarea telematicii mașinilor.
+### Others
+- **JWT (JSON Web Tokens)**: Used for user authentication.
+- **bcrypt**: For securing user passwords.
+- **Flask**: Used to handle car telematics.
 
-## Funcționalități
+## Features
 
-1. **Autentificare și înregistrare utilizatori**
-   - Utilizatorii se pot înregistra și autentifica folosind email și parolă.
-   - Token-ul JWT este utilizat pentru autentificare.
+1. **User Registration and Authentication**
+   - Users can register and log in using email and password.
+   - JWT tokens are used for authentication.
 
-2. **Adăugare metode de plată și documente**
-   - Utilizatorii pot adăuga metode de plată și documente necesare pentru închirierea mașinilor.
+2. **Adding Payment Methods and Documents**
+   - Users can add payment methods and documents required for renting cars.
 
-3. **Harta interactivă**
-   - Utilizatorii pot vizualiza mașinile disponibile pe o hartă interactivă și pot selecta o mașină pentru închiriere.
+3. **Interactive Map**
+   - Users can view available cars on an interactive map and select one for rental.
 
-4. **Închiriere și returnare mașini**
-   - Utilizatorii pot închiria mașini pentru o anumită perioadă de timp.
-   - Sistemul gestionează starea mașinilor și verifică dacă acestea pot fi returnate.
+4. **Car Rental and Return**
+   - Users can rent cars for a specific period.
+   - The system manages the car status and checks if they can be returned.
 
-5. **Gestionarea telematicii**
-   - Datele telematice ale mașinilor (ex. locație, nivel combustibil, starea motorului) sunt gestionate printr-un server Flask.
+5. **Telematics Management**
+   - Telematics data from cars (e.g., location, fuel level, engine status) is handled through a Flask server.
 
-6. **Scheduler pentru închirieri expirate**
-   - Închirierile expirate sunt șterse automat, iar starea mașinilor este actualizată.
+6. **Scheduler for Expired Rentals**
+   - Expired rentals are automatically deleted, and the car status is updated.
 
-## Structura proiectului
+## Project Structure
 
-Proiectul este organizat în următoarele module:
+The project is organized into the following modules:
 
-- **`backend/`** – Conține implementarea API-ului folosind FastAPI, gestionarea autentificării, bazei de date și a logicii de afaceri.
-- **`frontend/`** – Aplicația web dezvoltată în Angular pentru interfața utilizatorului, incluzând afișarea hărții interactive și gestionarea închirierilor.
-- **`car-telematic/`** – Modul responsabil de simularea telematicii mașinilor, dezvoltat în Python folosind Flask pentru gestionarea datelor despre vehicule.
-- **`uml/`** – Diagrame UML și de flux care descriu arhitectura și funcționarea sistemului.
+- **`backend/`** – Contains the API implementation using FastAPI, handling authentication, the database, and business logic.
+- **`frontend/`** – Angular web application for the user interface, including the interactive map and rental management.
+- **`car-telematic/`** – Module responsible for simulating car telematics, developed in Python using Flask to manage vehicle data.
+- **`uml/`** – UML and flow diagrams describing the system’s architecture and functionality.
